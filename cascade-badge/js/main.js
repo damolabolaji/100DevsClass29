@@ -66,13 +66,24 @@ console.log(randomShuffle(arr));
 
 const myArray = [1, 2, 3];
 
-function squaredandSum(arr) {
-  return arr
-    .map((item) => item ** 2)
-    .reduce((sum, current) => sum + current, 0);
+function checkgreater(arr1, arr2) {
+  function squaredAndSum(arr1) {
+    return arr1
+      .map((item) => item ** 2)
+      .reduce((sum, current) => sum + current, 0);
+  }
+
+  function cubedAndSum(arr2) {
+    return arr2
+      .map((item) => item ** 3)
+      .reduce((sum, current) => sum + current, 0);
+  }
+  console.log(cubedAndSum(arr2));
+  console.log(squaredAndSum(arr1));
+  return squaredAndSum(arr1) > cubedAndSum(arr2);
 }
 
-console.log(squaredandSum(myArray));
+console.log(checkgreater(myArray, myArray));
 //Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
 // Some cases:
 // [22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
