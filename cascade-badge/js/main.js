@@ -66,7 +66,7 @@ console.log(randomShuffle(arr));
 
 const myArray = [1, 2, 3];
 
-function checkgreater(arr1, arr2) {
+function checkGreater(arr1, arr2) {
   function squaredAndSum(arr1) {
     return arr1
       .map((item) => item ** 2)
@@ -83,7 +83,7 @@ function checkgreater(arr1, arr2) {
   return squaredAndSum(arr1) > cubedAndSum(arr2);
 }
 
-console.log(checkgreater(myArray, myArray));
+console.log(checkGreater(myArray, myArray));
 //Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
 // Some cases:
 // [22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
